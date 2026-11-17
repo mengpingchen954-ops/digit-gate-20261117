@@ -1,0 +1,326 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10",
+  "files": [
+    "__original-animation-0.bin"
+  ],
+  "subMetas": {
+    "24296": {
+      "importer": "gltf-material",
+      "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@24296",
+      "displayName": "",
+      "id": "24296",
+      "name": "手套鞋1.material",
+      "userData": {
+        "gltfIndex": 6
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c5701": {
+      "importer": "gltf-mesh",
+      "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@c5701",
+      "displayName": "",
+      "id": "c5701",
+      "name": "高级士兵.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 156132
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "083c5": {
+      "importer": "gltf-animation",
+      "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@083c5",
+      "displayName": "",
+      "id": "083c5",
+      "name": "Unreal Take.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.699999988079071
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 76
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0c5df": {
+      "importer": "gltf-material",
+      "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@0c5df",
+      "displayName": "",
+      "id": "0c5df",
+      "name": "内衬1.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ceb1e": {
+      "importer": "gltf-material",
+      "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@ceb1e",
+      "displayName": "",
+      "id": "ceb1e",
+      "name": "内衬红.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "173c6": {
+      "importer": "gltf-material",
+      "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@173c6",
+      "displayName": "",
+      "id": "173c6",
+      "name": "金.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a1e6c": {
+      "importer": "gltf-material",
+      "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@a1e6c",
+      "displayName": "",
+      "id": "a1e6c",
+      "name": "头盔红.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7fc12": {
+      "importer": "gltf-material",
+      "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@7fc12",
+      "displayName": "",
+      "id": "7fc12",
+      "name": "M_Glass_Clear1.material",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ac837": {
+      "importer": "gltf-material",
+      "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@ac837",
+      "displayName": "",
+      "id": "ac837",
+      "name": "身体.material",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4b43a": {
+      "importer": "gltf-material",
+      "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@4b43a",
+      "displayName": "",
+      "id": "4b43a",
+      "name": "枪身1.material",
+      "userData": {
+        "gltfIndex": 7
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "85c9e": {
+      "importer": "gltf-material",
+      "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@85c9e",
+      "displayName": "",
+      "id": "85c9e",
+      "name": "枪身1_8.material",
+      "userData": {
+        "gltfIndex": 8
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a5b06": {
+      "importer": "gltf-material",
+      "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@a5b06",
+      "displayName": "",
+      "id": "a5b06",
+      "name": "头盔红_9.material",
+      "userData": {
+        "gltfIndex": 9
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6ffb9": {
+      "importer": "gltf-material",
+      "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@6ffb9",
+      "displayName": "",
+      "id": "6ffb9",
+      "name": "枪管.material",
+      "userData": {
+        "gltfIndex": 10
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0ddd4": {
+      "importer": "gltf-scene",
+      "uuid": "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@0ddd4",
+      "displayName": "",
+      "id": "0ddd4",
+      "name": "高级士兵_加特林右移射击.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "Unreal Take",
+        "duration": 0.699999988079071,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Unreal Take",
+            "from": 0,
+            "to": 0.699999988079071,
+            "wrapMode": 2,
+            "previousId": "083c5"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@c5701"
+      ],
+      "skeletons": [
+        "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@438fe"
+      ],
+      "textures": [],
+      "materials": [
+        "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@0c5df",
+        "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@ceb1e",
+        "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@173c6",
+        "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@a1e6c",
+        "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@7fc12",
+        "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@ac837",
+        "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@24296",
+        "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@4b43a",
+        "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@85c9e",
+        "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@a5b06",
+        "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@6ffb9"
+      ],
+      "scenes": [
+        "bfb0ee00-57a0-45b0-ade9-b755a70b5c10@0ddd4"
+      ]
+    }
+  }
+}

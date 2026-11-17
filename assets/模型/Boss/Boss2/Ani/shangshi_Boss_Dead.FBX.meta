@@ -1,0 +1,99 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "b0f17af4-1f65-4eec-a468-880b4b6e5fcc",
+  "files": [
+    "__original-animation-0.bin"
+  ],
+  "subMetas": {
+    "083c5": {
+      "importer": "gltf-animation",
+      "uuid": "b0f17af4-1f65-4eec-a468-880b4b6e5fcc@083c5",
+      "displayName": "",
+      "id": "083c5",
+      "name": "Dead.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.5
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "cdfbe": {
+      "importer": "gltf-scene",
+      "uuid": "b0f17af4-1f65-4eec-a468-880b4b6e5fcc@cdfbe",
+      "displayName": "",
+      "id": "cdfbe",
+      "name": "shangshi_Boss_Dead.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "Unreal Take",
+        "duration": 2.5,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Dead",
+            "from": 0,
+            "to": 2.5,
+            "wrapMode": 2,
+            "previousId": "083c5"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "b0f17af4-1f65-4eec-a468-880b4b6e5fcc@cdfbe"
+      ]
+    }
+  }
+}

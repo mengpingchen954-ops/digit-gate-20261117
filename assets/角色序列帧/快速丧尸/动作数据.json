@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "sourceUuid": "c4b40aad-149c-4b09-b1cd-e4e1bfcf0e76",
+  "sourceName": "快速丧尸",
+  "size": 124,
+  "padding": 2,
+  "tile": 128,
+  "columns": 16,
+  "rows": 9,
+  "directions": 8,
+  "span": 1.6065804134181607,
+  "centerY": 0.3017387371301792,
+  "cameraPitch": -34.001,
+  "actions": [
+    {
+      "name": "Run",
+      "duration": 0.6333333333333333,
+      "events": [],
+      "start": 0,
+      "frames": 16,
+      "sourceDirections": [
+        0
+      ]
+    },
+    {
+      "name": "Attack",
+      "duration": 0.9,
+      "events": [
+        {
+          "frame": 0.4,
+          "func": "attackHit",
+          "params": []
+        }
+      ],
+      "start": 16,
+      "frames": 22,
+      "sourceDirections": [
+        7,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "Death",
+      "duration": 2,
+      "events": [],
+      "start": 82,
+      "frames": 48,
+      "sourceDirections": [
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "ea6874b5-8257-4b72-89ed-a87e8269da58",
+  "files": [],
+  "subMetas": {
+    "eb0eb": {
+      "importer": "gltf-mesh",
+      "uuid": "ea6874b5-8257-4b72-89ed-a87e8269da58@eb0eb",
+      "displayName": "",
+      "id": "eb0eb",
+      "name": "炮_炮杆2.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 1896
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f7b75": {
+      "importer": "gltf-mesh",
+      "uuid": "ea6874b5-8257-4b72-89ed-a87e8269da58@f7b75",
+      "displayName": "",
+      "id": "f7b75",
+      "name": "UCX_炮_炮杆2.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 60
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "84fad": {
+      "importer": "gltf-material",
+      "uuid": "ea6874b5-8257-4b72-89ed-a87e8269da58@84fad",
+      "displayName": "",
+      "id": "84fad",
+      "name": "金属金.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "09f5c": {
+      "importer": "gltf-material",
+      "uuid": "ea6874b5-8257-4b72-89ed-a87e8269da58@09f5c",
+      "displayName": "",
+      "id": "09f5c",
+      "name": "金属.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "70fb5": {
+      "importer": "gltf-material",
+      "uuid": "ea6874b5-8257-4b72-89ed-a87e8269da58@70fb5",
+      "displayName": "",
+      "id": "70fb5",
+      "name": "黑.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b9c02": {
+      "importer": "gltf-material",
+      "uuid": "ea6874b5-8257-4b72-89ed-a87e8269da58@b9c02",
+      "displayName": "",
+      "id": "b9c02",
+      "name": "金属银.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d348d": {
+      "importer": "gltf-material",
+      "uuid": "ea6874b5-8257-4b72-89ed-a87e8269da58@d348d",
+      "displayName": "",
+      "id": "d348d",
+      "name": "金属蓝.material",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c28f5": {
+      "importer": "gltf-material",
+      "uuid": "ea6874b5-8257-4b72-89ed-a87e8269da58@c28f5",
+      "displayName": "",
+      "id": "c28f5",
+      "name": "金属金_5.material",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "aacbb": {
+      "importer": "gltf-material",
+      "uuid": "ea6874b5-8257-4b72-89ed-a87e8269da58@aacbb",
+      "displayName": "",
+      "id": "aacbb",
+      "name": "金属_6.material",
+      "userData": {
+        "gltfIndex": 6
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0862c": {
+      "importer": "gltf-scene",
+      "uuid": "ea6874b5-8257-4b72-89ed-a87e8269da58@0862c",
+      "displayName": "",
+      "id": "0862c",
+      "name": "炮_炮杆2.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "ea6874b5-8257-4b72-89ed-a87e8269da58@eb0eb",
+        "ea6874b5-8257-4b72-89ed-a87e8269da58@f7b75"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "ea6874b5-8257-4b72-89ed-a87e8269da58@84fad",
+        "ea6874b5-8257-4b72-89ed-a87e8269da58@09f5c",
+        "ea6874b5-8257-4b72-89ed-a87e8269da58@70fb5",
+        "ea6874b5-8257-4b72-89ed-a87e8269da58@b9c02",
+        "ea6874b5-8257-4b72-89ed-a87e8269da58@d348d",
+        "ea6874b5-8257-4b72-89ed-a87e8269da58@c28f5",
+        "ea6874b5-8257-4b72-89ed-a87e8269da58@aacbb"
+      ],
+      "scenes": [
+        "ea6874b5-8257-4b72-89ed-a87e8269da58@0862c"
+      ]
+    }
+  }
+}

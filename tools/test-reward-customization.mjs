@@ -1,0 +1,66 @@
+import fs from 'node:fs/promises';
+import { editorCall } from './editor-bridge-client.mjs';
+import { normalizeConfig, validateConfig } from './level-studio/server.mjs';
+const cfg=normalizeConfig(JSON.parse(await fs.readFile('assets/配置/数字门配置.json','utf8')));
+validateConfig(cfg);
+for(const bad of [{icon:'not-a-texture'},{iconScale:0},{iconScale:5},{iconTransform:null},{iconTransform:{offset:{x:11,y:0,z:0}}},{iconTransform:{rotation:{x:0,y:0,z:361}}},{iconTransform:{scale:{x:0,y:1}}}]){
+    const c=structuredClone(cfg);Object.assign(c.rewards[0],bad);let rejected=false;
+    try{validateConfig(c);}catch{rejected=true;}if(!rejected)throw Error('无效图片设置未被拒绝');
+}
+const id=await editorCall('execute_javascript',{context:'editor',code:`const a=await Editor.Message.request('preview','query-preview-url'),u=new URL(typeof a==='string'?a:a.url);u.hostname='127.0.0.1';const w=new(require('electron').BrowserWindow)({show:false,width:750,height:1334,webPreferences:{offscreen:true,backgroundThrottling:false}});w.logs=[];w.webContents.on('console-message',(_e,l,m)=>{if(l>=3)w.logs.push(m);});await w.loadURL(u.href);return w.id;`});
+const evaluate=code=>editorCall('execute_javascript',{context:'editor',code:`const w=require('electron').BrowserWindow.fromId(${id});try{return await w.webContents.executeJavaScript(${JSON.stringify(`(async()=>{${code}})()`)});}catch(e){throw Error(e.message+' '+w.logs.join(' | '));}`},60000);
+try{
+    await evaluate((await fs.readFile('tools/prepare-bake-preview.js','utf8')).replace('EXPECTED_SCENE',JSON.stringify('e26a1c6f-fd17-4e70-85c0-1a6dd541906c')));
+    console.log(JSON.stringify(await evaluate(`
+        const cc=await System.import('cc'),g=cc.director.getScene().getComponentInChildren(cc.js.getClassByName('数字门玩法'));cc.game.pause();g.music.stop();g.sound=()=>{};g.cfg=structuredClone(g.cfg);
+        const passed=[],check=(ok,s)=>{if(!ok)throw Error(s);passed.push(s);};
+        const first=()=>g.rewards.find(r=>r.leftBarrier),plane=()=>g.rewards.find(r=>r.kind==='plane'),sprite=r=>r.node.getComponentInChildren(cc.Sprite);
+        const fill=()=>{while(g.liveSoldiers.length<g.squadCapacity)g.addSoldier();};
+        const max=()=>g.hud.toasts.filter(t=>t.node.getComponentInChildren(cc.Label)?.string.includes('MAX')).length;
+        check(g.cfg.maxSoldiers===4&&g.squadCapacity===4,'开场容量为 4');
+        g.cfg.rewards[0].icon=g.textures[1].uuid;g.cfg.rewards[0].iconScale=.7;
+        g.cfg.rewards[0].layers=3;
+        g.cfg.rewards[0].iconTransform={offset:{x:.4,y:.3,z:-.2},rotation:{x:10,y:20,z:30},scale:{x:1.2,y:.8}};
+        g.cfg.rewards[1].icon=g.textures[2].uuid;g.cfg.rewards[1].iconScale=1.3;
+        g.cfg.planeIcon=g.textures[0].uuid;g.cfg.planeIconScale=.8;g.restart();g.begin();
+        check(sprite(first()).spriteFrame.texture===g.textures[1]&&sprite(plane()).spriteFrame.texture===g.textures[0],'左右奖励分别使用自己的图片');
+        const baseline=first().badge.icon.scale.x/.7;
+        check(Math.abs(plane().badge.icon.scale.x/baseline-.8)<1e-6,'右侧奖励图片大小独立');
+        const icon=first().badge.icon,sp=sprite(first()).node;
+        const rotation=cc.Quat.fromEuler(new cc.Quat(),10,20,30);
+        check(Math.abs(icon.position.x-g.cfg.rewardStone.offset.x-.4)<1e-6&&Math.abs(icon.position.z-g.cfg.rewardStone.offset.z+.2)<1e-6,'每份图片的左右前后偏移生效');
+        check(Math.abs(sp.scale.x-1.2)<1e-6&&Math.abs(sp.scale.y-.8)<1e-6&&Math.abs(cc.Quat.dot(sp.rotation,rotation))>1-1e-6,'图片独立三轴旋转和宽高缩放生效');
+        g.hud.updateBadgeValue(first().badge);check(Math.abs(cc.Quat.dot(sp.rotation,rotation))>1-1e-6,'朝向相机的更新不覆盖自定义旋转');
+        const oldHeight=icon.position.y;g.hitReward(g.rewards.indexOf(first()),first().maxHp/3);first().rock.tick(1);
+        check(icon.position.y<oldHeight&&Math.abs(icon.position.x-g.cfg.rewardStone.offset.x-.4)<1e-6&&Math.abs(icon.position.y-first().rock.iconY-.3)<1e-6,'石头减层时图片继续下降并保留独立位置偏移');
+        fill();check(g.liveSoldiers.length===4&&g.reachedMax,'人数达到 4 后满员');g.addSoldier();check(g.liveSoldiers.length===4,'解锁前不能超过 4 人');
+        const r=first();g.hitReward(g.rewards.indexOf(r),r.hp);
+        const flying=g.hud.flights[0].node;g.hud.tick(g.cfg.effects.rewardFlightSeconds/2);
+        check(Math.abs(cc.Quat.dot(flying.getComponentInChildren(cc.Sprite).node.rotation,rotation))>1-1e-6,'领取飞行保留自定义旋转');
+        check(g.squadCapacity===4,'打碎但图片未抵达时容量不变');
+        g.hud.tick(g.cfg.effects.rewardFlightSeconds+.01);
+        check(g.squadCapacity===7&&!g.reachedMax&&g.cfg.maxSoldiers===4,'领取后容量加到 7，初始配置保持 4');
+        check(!g.hud.toasts.some(t=>t.node.getComponentInChildren(cc.Label)?.string.includes('容量')),'扩容不播放容量提示特效');
+        g.collectReward(r);check(g.squadCapacity===7,'同一奖励不会重复扩容');
+        const before=max();g.addSoldier();check(g.liveSoldiers.length===5&&max()===before,'新增第一个空位不触发 MAX');
+        g.addSoldier();check(g.liveSoldiers.length===6&&max()===before,'新增第二个空位不触发 MAX');
+        g.addSoldier();check(g.liveSoldiers.length===7&&max()===before+1,'扩容后能补三人并再次触发 MAX');
+        g.spawnLeftReward(false);const second=first();
+        check(sprite(second).spriteFrame.texture===g.textures[2]&&Math.abs(second.badge.icon.scale.x/baseline-1.3)<1e-6,'下一奖励独立图片和大小生效');
+        check(sprite(plane()).spriteFrame.texture===g.textures[0],'后续奖励不改变右侧图片');
+        g.hitReward(g.rewards.indexOf(second),second.hp);g.hud.tick(g.cfg.effects.rewardFlightSeconds+.01);
+        check(g.squadCapacity===10,'领取第二份奖励容量到 10');
+        const p=plane();g.hitReward(g.rewards.indexOf(p),p.hp);check(g.squadCapacity===13,'右侧奖励也使容量增加 3');
+        g.restart();check(g.squadCapacity===4&&g.liveSoldiers.length===g.cfg.startSoldiers,'重开容量恢复 4');
+        g.rewardIndex=4;g.spawnLeftReward(false);
+        const fifth=g.rewards[g.rewards.length-1];
+        check(sprite(fifth).spriteFrame.texture.uuid==='63914264-5453-4043-ab4f-deb2d727d16f@6c48a','奖励 5 实际显示三级弓图片');
+        g.cfg.rewards.reverse();g.restart();
+        check(sprite(first()).spriteFrame.texture===(g.textures.find(t=>t.uuid===g.cfg.rewards[0].icon)||g.textures[0]),'调整顺序后图片跟随奖励本身');
+        g.cfg.rewards[0].icon='';g.cfg.rewards[0].iconScale=undefined;g.restart();
+        check(sprite(first()).spriteFrame.texture===(g.cfg.rewards[0].kind==='soldier'?g.textures[2]:g.textures[0]),'选择默认时保留奖励种类原有图片');
+        check(Math.abs(first().badge.icon.scale.x-baseline)<1e-6,'默认大小不会继承前一个奖励的缩放');
+        return {passed};
+    `),null,2));
+    const errors=await editorCall('execute_javascript',{context:'editor',code:`return require('electron').BrowserWindow.fromId(${id}).logs;`});if(errors.length)throw Error(errors.join('\n'));
+}finally{await editorCall('execute_javascript',{context:'editor',code:`require('electron').BrowserWindow.fromId(${id})?.destroy();return true;`});}

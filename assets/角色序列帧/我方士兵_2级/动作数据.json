@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "sourceUuid": "ab3e8ee6-c2c9-4bb5-96dc-4ed05d5b7239",
+  "sourceName": "我方士兵_2级",
+  "size": 124,
+  "padding": 2,
+  "tile": 128,
+  "columns": 16,
+  "rows": 5,
+  "directions": 1,
+  "span": 4.8552162226089,
+  "centerY": -0.36799936904546715,
+  "cameraPitch": -34.001,
+  "actions": [
+    {
+      "name": "原地射击",
+      "duration": 0.36666666666666664,
+      "events": [],
+      "start": 0,
+      "frames": 9
+    },
+    {
+      "name": "左移射击",
+      "duration": 0.7,
+      "events": [],
+      "start": 9,
+      "frames": 17
+    },
+    {
+      "name": "右移射击",
+      "duration": 0.7,
+      "events": [],
+      "start": 26,
+      "frames": 17
+    },
+    {
+      "name": "死亡",
+      "duration": 1.2333333333333334,
+      "events": [],
+      "start": 43,
+      "frames": 30
+    }
+  ]
+}

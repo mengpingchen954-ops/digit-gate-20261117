@@ -1,0 +1,234 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "5fbff193-984e-423d-9f6c-096569d0925c",
+  "files": [],
+  "subMetas": {
+    "637b7": {
+      "importer": "gltf-mesh",
+      "uuid": "5fbff193-984e-423d-9f6c-096569d0925c@637b7",
+      "displayName": "",
+      "id": "637b7",
+      "name": "shibing_skin.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 33150
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "5fbff193-984e-423d-9f6c-096569d0925c@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 104
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a2038": {
+      "importer": "gltf-material",
+      "uuid": "5fbff193-984e-423d-9f6c-096569d0925c@a2038",
+      "displayName": "",
+      "id": "a2038",
+      "name": "白金.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "54de7": {
+      "importer": "gltf-material",
+      "uuid": "5fbff193-984e-423d-9f6c-096569d0925c@54de7",
+      "displayName": "",
+      "id": "54de7",
+      "name": "手套.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "efe51": {
+      "importer": "gltf-material",
+      "uuid": "5fbff193-984e-423d-9f6c-096569d0925c@efe51",
+      "displayName": "",
+      "id": "efe51",
+      "name": "红钢铁.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f5f25": {
+      "importer": "gltf-material",
+      "uuid": "5fbff193-984e-423d-9f6c-096569d0925c@f5f25",
+      "displayName": "",
+      "id": "f5f25",
+      "name": "红钢铁_3.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ac837": {
+      "importer": "gltf-material",
+      "uuid": "5fbff193-984e-423d-9f6c-096569d0925c@ac837",
+      "displayName": "",
+      "id": "ac837",
+      "name": "身体.material",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4f023": {
+      "importer": "gltf-material",
+      "uuid": "5fbff193-984e-423d-9f6c-096569d0925c@4f023",
+      "displayName": "",
+      "id": "4f023",
+      "name": "白金_5.material",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b1b73": {
+      "importer": "gltf-material",
+      "uuid": "5fbff193-984e-423d-9f6c-096569d0925c@b1b73",
+      "displayName": "",
+      "id": "b1b73",
+      "name": "黑金.material",
+      "userData": {
+        "gltfIndex": 6
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "62bf1": {
+      "importer": "gltf-material",
+      "uuid": "5fbff193-984e-423d-9f6c-096569d0925c@62bf1",
+      "displayName": "",
+      "id": "62bf1",
+      "name": "身体_7.material",
+      "userData": {
+        "gltfIndex": 7
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f68ae": {
+      "importer": "gltf-scene",
+      "uuid": "5fbff193-984e-423d-9f6c-096569d0925c@f68ae",
+      "displayName": "",
+      "id": "f68ae",
+      "name": "低级士兵.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "5fbff193-984e-423d-9f6c-096569d0925c@637b7"
+      ],
+      "skeletons": [
+        "5fbff193-984e-423d-9f6c-096569d0925c@438fe"
+      ],
+      "textures": [],
+      "materials": [
+        "5fbff193-984e-423d-9f6c-096569d0925c@a2038",
+        "5fbff193-984e-423d-9f6c-096569d0925c@54de7",
+        "5fbff193-984e-423d-9f6c-096569d0925c@efe51",
+        "5fbff193-984e-423d-9f6c-096569d0925c@f5f25",
+        "5fbff193-984e-423d-9f6c-096569d0925c@ac837",
+        "5fbff193-984e-423d-9f6c-096569d0925c@4f023",
+        "5fbff193-984e-423d-9f6c-096569d0925c@b1b73",
+        "5fbff193-984e-423d-9f6c-096569d0925c@62bf1"
+      ],
+      "scenes": [
+        "5fbff193-984e-423d-9f6c-096569d0925c@f68ae"
+      ]
+    }
+  }
+}

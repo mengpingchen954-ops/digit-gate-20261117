@@ -1,0 +1,130 @@
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: upgrade-vs:vert
+      frag: upgrade-fs:frag
+      rasterizerState: { cullMode: none }
+      depthStencilState: { depthTest: true, depthWrite: false }
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendSrcAlpha: one
+          blendDstAlpha: one_minus_src_alpha
+      properties:
+        tint: { value: [0.173, 0.882, 1, 1], editor: { type: color, displayName: 能量颜色 } }
+        phase: { value: [0.28, 0, 1.25, 0], editor: { displayName: 进度_层级_亮度 } }
+        shape: { value: [1.15, 2.1, 0, 0], editor: { displayName: 范围_高度 } }
+}%
+CCProgram upgrade-vs %{
+  precision highp float;
+  #if USE_INSTANCING
+    in vec4 a_matWorld0;
+    in vec4 a_matWorld1;
+    in vec4 a_matWorld2;
+  #endif
+  #include <builtin/uniforms/cc-global>
+  #include <legacy/local-batch>
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+  out vec2 v_uv;
+  out float v_life;
+  uniform UpgradeGlow { vec4 tint; vec4 phase; vec4 shape; };
+  vec4 vert () {
+    mat4 world;
+    CCGetWorldMatrix(world);
+    vec3 p = a_position;
+    v_uv = a_texCoord;
+    v_life = 1.0;
+    float t = phase.x;
+    float spread = 1.0 - pow(1.0 - min(t * 2.2, 1.0), 3.0);
+    if (phase.y < 0.5) {
+      p.xz *= shape.x;
+    } else if (phase.y < 2.5) {
+      float radius = mix(0.26, 0.9, spread) * shape.x;
+      if (phase.y > 1.5) radius *= 1.12;
+      p.xz *= radius * (1.0 + 0.12 * a_texCoord.y);
+      p.y *= shape.y * (0.3 + 0.7 * spread);
+    } else {
+      float seed = a_color.r;
+      float delay = seed * 0.17 + 0.04;
+      float life = clamp((t - delay) / (0.48 + seed * 0.36), 0.0, 1.0);
+      float angle = seed * 67.37 + life * (0.45 + seed);
+      float radius = shape.x * (0.25 + life * (0.4 + seed * 0.65));
+      vec3 center = vec3(cos(angle) * radius, shape.y * (0.06 + life * (0.45 + seed * 0.65)), sin(angle) * radius);
+      float size = (0.026 + a_color.g * 0.035) * (0.65 + sin(life * 3.141593) * 0.6);
+      vec4 position = world * vec4(center, 1.0);
+      float scale = length(world[0].xyz);
+      position.xyz += (cc_matViewInv[0].xyz * (v_uv.x * 2.0 - 1.0)
+        + cc_matViewInv[1].xyz * (v_uv.y * 2.0 - 1.0)) * size * scale;
+      v_life = smoothstep(0.0, 0.08, life) * (1.0 - smoothstep(0.55, 1.0, life));
+      return cc_matViewProj * position;
+    }
+    return cc_matViewProj * world * vec4(p, 1.0);
+  }
+}%
+CCProgram upgrade-fs %{
+  precision highp float;
+  in vec2 v_uv;
+  in float v_life;
+  uniform UpgradeGlow { vec4 tint; vec4 phase; vec4 shape; };
+  float ring(float r, float at, float width) { return 1.0 - smoothstep(width * 0.25, width, abs(r - at)); }
+  float band(float p, float width) { return 1.0 - smoothstep(width * 0.25, width, abs(p)); }
+  vec4 frag () {
+    float t = phase.x;
+    float fade = smoothstep(0.0, 0.035, t) * (1.0 - smoothstep(0.45, 1.0, t));
+    float glow = 0.0;
+    float core = 0.0;
+    if (phase.y < 0.5) {
+      vec2 p = v_uv * 2.0 - 1.0;
+      float r = length(p);
+      float a = atan(p.y, p.x);
+      float radius = 0.16 + 0.68 * (1.0 - pow(1.0 - min(t * 1.8, 1.0), 3.0));
+      float shock = ring(r, radius, 0.045) * (1.0 - smoothstep(0.2, 0.9, t));
+      float orbit = ring(r, 0.51 + 0.05 * sin(t * 8.0), 0.025);
+      float segments = smoothstep(-0.3, 0.2, sin(a * 3.0 + t * 9.0));
+      float ticks = ring(r, 0.65, 0.042) * pow(max(0.0, cos(a * 16.0 - t * 3.0)), 18.0);
+      float rays = pow(max(0.0, cos(a * 8.0 + t * 2.0)), 28.0)
+        * smoothstep(0.18, 0.36, r) * (1.0 - smoothstep(0.43, 0.58, r));
+      glow = shock + orbit * segments * 0.8 + ticks * 0.6 + rays * 0.45
+        + exp(-r * r * 8.0) * 0.2 * (1.0 - smoothstep(0.1, 0.55, t));
+      core = ring(r, radius, 0.012) * 0.75 + orbit * 0.3;
+      glow *= 1.0 - smoothstep(0.9, 1.0, r);
+    } else if (phase.y < 1.5) {
+      float u = v_uv.x, y = v_uv.y;
+      float cell = floor(u * 22.0);
+      float seed = fract(sin(cell * 43.17) * 457.27);
+      float lane = abs(fract(u * 22.0) - 0.5);
+      float head = fract(seed + t * 1.6);
+      float beam = band(lane, 0.055 + seed * 0.09);
+      float trail = smoothstep(head - 0.38, head - 0.02, y) * (1.0 - smoothstep(head, head + 0.045, y));
+      float flash = exp(-y * 7.0) * (1.0 - smoothstep(0.07, 0.3, t));
+      glow = beam * trail * 0.65 + flash * 0.24 + exp(-y * 5.0) * 0.06;
+      core = beam * band(y - head, 0.032) * 0.9;
+      fade *= smoothstep(0.0, 0.035, y) * (1.0 - smoothstep(0.55, 1.0, y));
+    } else if (phase.y < 2.5) {
+      float y = v_uv.y;
+      float turn = fract(v_uv.x * 2.0 + y * 1.25 - t * 1.4);
+      float edge = abs(turn - 0.5);
+      float ribbon = band(edge, 0.08);
+      float rise = smoothstep(t * 0.5 - 0.15, t * 0.5 + 0.08, y)
+        * (1.0 - smoothstep(0.35 + t * 0.65, 0.6 + t * 0.55, y));
+      glow = (ribbon * 0.7 + band(edge, 0.17) * 0.12) * rise;
+      core = band(edge - 0.044, 0.016) * rise * 0.85;
+      fade *= smoothstep(0.0, 0.05, y) * (1.0 - smoothstep(0.7, 1.0, y));
+    } else {
+      vec2 p = abs(v_uv * 2.0 - 1.0);
+      float star = band(p.x, 0.13) * pow(1.0 - p.y, 2.0) + band(p.y, 0.13) * pow(1.0 - p.x, 2.0);
+      float diamond = 1.0 - smoothstep(0.12, 0.42, p.x + p.y);
+      glow = star * 0.8 + diamond;
+      core = diamond;
+      fade = v_life;
+    }
+    float opacity = clamp((glow + core * 0.2) * fade * phase.z * tint.a, 0.0, 1.0);
+    if (opacity < 0.003) discard;
+    vec3 color = mix(tint.rgb, vec3(1.0), clamp(core * 0.9, 0.0, 0.9));
+    return vec4(color, opacity);
+  }
+}%

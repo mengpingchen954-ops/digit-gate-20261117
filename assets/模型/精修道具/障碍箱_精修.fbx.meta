@@ -1,0 +1,96 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "af40928b-5991-4460-8f0c-8ca5ca7d965f",
+  "files": [],
+  "subMetas": {
+    "86784": {
+      "importer": "gltf-scene",
+      "uuid": "af40928b-5991-4460-8f0c-8ca5ca7d965f@86784",
+      "displayName": "",
+      "id": "86784",
+      "name": "障碍箱_精修.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ef3c2": {
+      "importer": "gltf-mesh",
+      "uuid": "af40928b-5991-4460-8f0c-8ca5ca7d965f@ef3c2",
+      "displayName": "",
+      "id": "ef3c2",
+      "name": "立方体.063.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 4864
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3fcc7": {
+      "importer": "gltf-material",
+      "uuid": "af40928b-5991-4460-8f0c-8ca5ca7d965f@3fcc7",
+      "displayName": "",
+      "id": "3fcc7",
+      "name": "共享烘焙色板.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "af40928b-5991-4460-8f0c-8ca5ca7d965f@ef3c2"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "af40928b-5991-4460-8f0c-8ca5ca7d965f@3fcc7"
+      ],
+      "scenes": [
+        "af40928b-5991-4460-8f0c-8ca5ca7d965f@86784"
+      ]
+    }
+  }
+}

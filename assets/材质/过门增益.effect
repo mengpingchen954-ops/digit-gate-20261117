@@ -1,0 +1,65 @@
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: gate-vs:vert
+      frag: gate-fs:frag
+      rasterizerState: { cullMode: none }
+      depthStencilState: { depthTest: true, depthWrite: false }
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one
+          blendSrcAlpha: one
+          blendDstAlpha: one_minus_src_alpha
+      properties:
+        tint: { value: [0.18, 1, 0.58, 1], editor: { type: color, displayName: 光效颜色 } }
+        phase: { value: [0, 0, 0, 0] }
+}%
+CCProgram gate-vs %{
+  precision highp float;
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  #if USE_INSTANCING
+    in vec4 a_matWorld0;
+    in vec4 a_matWorld1;
+    in vec4 a_matWorld2;
+  #endif
+  #include <legacy/local-batch>
+  #include <builtin/uniforms/cc-global>
+  out vec2 v_uv;
+  vec4 vert () {
+    mat4 world;
+    CCGetWorldMatrix(world);
+    v_uv = a_texCoord;
+    return cc_matViewProj * world * vec4(a_position, 1.0);
+  }
+}%
+CCProgram gate-fs %{
+  precision highp float;
+  in vec2 v_uv;
+  uniform GateGlow { vec4 tint; vec4 phase; };
+  vec4 frag () {
+    float t = phase.x;
+    float fade = smoothstep(0.0, 0.06, t) * (1.0 - smoothstep(0.28, 1.0, t));
+    float alpha = 0.0;
+    if (phase.y < 0.5) {
+      vec2 p = v_uv * 2.0 - 1.0;
+      float r = length(p);
+      float ring = 1.0 - smoothstep(0.016, 0.075, abs(r - 0.77));
+      float halo = exp(-r * r * 4.0) * 0.28;
+      float arc = (1.0 - smoothstep(0.009, 0.025, abs(r - 0.61))) * 0.5;
+      alpha = (ring + halo + arc) * fade;
+    } else {
+      float id = floor(v_uv.x * 18.0);
+      float lane = abs(fract(v_uv.x * 18.0) - 0.5);
+      float head = fract(id * 0.618 + t * 1.1);
+      float trail = smoothstep(head - 0.34, head, v_uv.y) * (1.0 - smoothstep(head, head + 0.055, v_uv.y));
+      float beam = 1.0 - smoothstep(0.04, 0.23, lane);
+      float glint = (1.0 - smoothstep(0.01, 0.13, abs(v_uv.y - head))) * (1.0 - smoothstep(0.18, 0.42, lane));
+      alpha = (beam * trail + glint * 0.45) * fade * smoothstep(0.0, 0.08, v_uv.y) * (1.0 - smoothstep(0.7, 1.0, v_uv.y));
+    }
+    if (alpha < 0.003) discard;
+    return vec4(tint.rgb, alpha * tint.a);
+  }
+}%

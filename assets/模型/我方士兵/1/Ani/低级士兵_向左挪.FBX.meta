@@ -1,0 +1,275 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "2b057976-ce71-44d0-89d8-3d476efaf90a",
+  "files": [
+    "__original-animation-0.bin"
+  ],
+  "subMetas": {
+    "637b7": {
+      "importer": "gltf-mesh",
+      "uuid": "2b057976-ce71-44d0-89d8-3d476efaf90a@637b7",
+      "displayName": "",
+      "id": "637b7",
+      "name": "shibing_skin.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 33150
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "083c5": {
+      "importer": "gltf-animation",
+      "uuid": "2b057976-ce71-44d0-89d8-3d476efaf90a@083c5",
+      "displayName": "",
+      "id": "083c5",
+      "name": "向左挪.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.699999988079071
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "2b057976-ce71-44d0-89d8-3d476efaf90a@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 104
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a2038": {
+      "importer": "gltf-material",
+      "uuid": "2b057976-ce71-44d0-89d8-3d476efaf90a@a2038",
+      "displayName": "",
+      "id": "a2038",
+      "name": "白金.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "54de7": {
+      "importer": "gltf-material",
+      "uuid": "2b057976-ce71-44d0-89d8-3d476efaf90a@54de7",
+      "displayName": "",
+      "id": "54de7",
+      "name": "手套.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "efe51": {
+      "importer": "gltf-material",
+      "uuid": "2b057976-ce71-44d0-89d8-3d476efaf90a@efe51",
+      "displayName": "",
+      "id": "efe51",
+      "name": "红钢铁.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f5f25": {
+      "importer": "gltf-material",
+      "uuid": "2b057976-ce71-44d0-89d8-3d476efaf90a@f5f25",
+      "displayName": "",
+      "id": "f5f25",
+      "name": "红钢铁_3.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ac837": {
+      "importer": "gltf-material",
+      "uuid": "2b057976-ce71-44d0-89d8-3d476efaf90a@ac837",
+      "displayName": "",
+      "id": "ac837",
+      "name": "身体.material",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4f023": {
+      "importer": "gltf-material",
+      "uuid": "2b057976-ce71-44d0-89d8-3d476efaf90a@4f023",
+      "displayName": "",
+      "id": "4f023",
+      "name": "白金_5.material",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b1b73": {
+      "importer": "gltf-material",
+      "uuid": "2b057976-ce71-44d0-89d8-3d476efaf90a@b1b73",
+      "displayName": "",
+      "id": "b1b73",
+      "name": "黑金.material",
+      "userData": {
+        "gltfIndex": 6
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "62bf1": {
+      "importer": "gltf-material",
+      "uuid": "2b057976-ce71-44d0-89d8-3d476efaf90a@62bf1",
+      "displayName": "",
+      "id": "62bf1",
+      "name": "身体_7.material",
+      "userData": {
+        "gltfIndex": 7
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ea2f2": {
+      "importer": "gltf-scene",
+      "uuid": "2b057976-ce71-44d0-89d8-3d476efaf90a@ea2f2",
+      "displayName": "",
+      "id": "ea2f2",
+      "name": "低级士兵_向左挪.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "Unreal Take",
+        "duration": 0.699999988079071,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "向左挪",
+            "from": 0,
+            "to": 0.699999988079071,
+            "wrapMode": 2,
+            "previousId": "083c5"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "2b057976-ce71-44d0-89d8-3d476efaf90a@637b7"
+      ],
+      "skeletons": [
+        "2b057976-ce71-44d0-89d8-3d476efaf90a@438fe"
+      ],
+      "textures": [],
+      "materials": [
+        "2b057976-ce71-44d0-89d8-3d476efaf90a@a2038",
+        "2b057976-ce71-44d0-89d8-3d476efaf90a@54de7",
+        "2b057976-ce71-44d0-89d8-3d476efaf90a@efe51",
+        "2b057976-ce71-44d0-89d8-3d476efaf90a@f5f25",
+        "2b057976-ce71-44d0-89d8-3d476efaf90a@ac837",
+        "2b057976-ce71-44d0-89d8-3d476efaf90a@4f023",
+        "2b057976-ce71-44d0-89d8-3d476efaf90a@b1b73",
+        "2b057976-ce71-44d0-89d8-3d476efaf90a@62bf1"
+      ],
+      "scenes": [
+        "2b057976-ce71-44d0-89d8-3d476efaf90a@ea2f2"
+      ]
+    }
+  }
+}

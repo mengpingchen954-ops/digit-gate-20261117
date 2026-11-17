@@ -1,0 +1,96 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "ba47ceb2-704c-4be7-b8e9-be544dc6061e",
+  "files": [],
+  "subMetas": {
+    "1b2b7": {
+      "importer": "gltf-mesh",
+      "uuid": "ba47ceb2-704c-4be7-b8e9-be544dc6061e@1b2b7",
+      "displayName": "",
+      "id": "1b2b7",
+      "name": "立方体.019.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 4864
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3fcc7": {
+      "importer": "gltf-material",
+      "uuid": "ba47ceb2-704c-4be7-b8e9-be544dc6061e@3fcc7",
+      "displayName": "",
+      "id": "3fcc7",
+      "name": "共享烘焙色板.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fe596": {
+      "importer": "gltf-scene",
+      "uuid": "ba47ceb2-704c-4be7-b8e9-be544dc6061e@fe596",
+      "displayName": "",
+      "id": "fe596",
+      "name": "补给箱_精修.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "ba47ceb2-704c-4be7-b8e9-be544dc6061e@1b2b7"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "ba47ceb2-704c-4be7-b8e9-be544dc6061e@3fcc7"
+      ],
+      "scenes": [
+        "ba47ceb2-704c-4be7-b8e9-be544dc6061e@fe596"
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "be3cbcc0-9b9e-4eda-96f1-1ce22f2b753a",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "be3cbcc0-9b9e-4eda-96f1-1ce22f2b753a@6c48a",
+      "displayName": "道具色板",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "be3cbcc0-9b9e-4eda-96f1-1ce22f2b753a",
+        "visible": false
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "be3cbcc0-9b9e-4eda-96f1-1ce22f2b753a@6c48a",
+    "compressSettings": {
+      "useCompressTexture": true,
+      "presetId": "digitgate-webp"
+    }
+  }
+}

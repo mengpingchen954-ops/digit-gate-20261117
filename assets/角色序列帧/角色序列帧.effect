@@ -1,0 +1,97 @@
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: frame-vs:vert
+      frag: frame-fs:frag
+      rasterizerState: { cullMode: none }
+      depthStencilState: { depthTest: true, depthWrite: true }
+      properties:
+        mainTexture: { value: white }
+        frameGeometry: { value: [1, 0.5, 0, 0] }
+  - name: shadow
+    passes:
+    - vert: shadow-vs:vert
+      frag: shadow-fs:frag
+      rasterizerState: { cullMode: none }
+      depthStencilState: { depthTest: true, depthWrite: false }
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendSrcAlpha: one
+          blendDstAlpha: one_minus_src_alpha
+}%
+CCProgram shadow-vs %{
+  precision highp float;
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  #if USE_INSTANCING
+    in vec4 a_matWorld0;
+    in vec4 a_matWorld1;
+    in vec4 a_matWorld2;
+  #endif
+  #include <legacy/local-batch>
+  #include <builtin/uniforms/cc-global>
+  out vec2 v_uv;
+  vec4 vert () {
+    mat4 world;
+    CCGetWorldMatrix(world);
+    v_uv = a_texCoord;
+    return cc_matViewProj * world * vec4(a_position, 1.0);
+  }
+}%
+CCProgram shadow-fs %{
+  precision highp float;
+  in vec2 v_uv;
+  vec4 frag () {
+    float radius = length(v_uv * 2.0 - 1.0);
+    if (radius > 1.0) discard;
+    return vec4(0.07, 0.15, 0.20, 0.28 * (1.0 - smoothstep(0.65, 1.0, radius)));
+  }
+}%
+CCProgram frame-vs %{
+  precision highp float;
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  #if USE_INSTANCING
+    layout(location = 4) in vec4 a_matWorld0;
+    layout(location = 5) in vec4 a_matWorld1;
+    layout(location = 6) in vec4 a_matWorld2;
+  #endif
+  #include <legacy/local-batch>
+  #include <builtin/uniforms/cc-global>
+  uniform Geometry { vec4 frameGeometry; };
+  #if USE_INSTANCING
+    layout(location = 2) in vec4 a_frameUV;
+    layout(location = 3) in vec4 a_frameFlash;
+  #endif
+  out vec2 v_uv;
+  out float v_flash;
+  vec4 vert () {
+    mat4 world;
+    CCGetWorldMatrix(world);
+    float scale = length(world[1].xyz);
+    vec3 p = world[3].xyz + vec3(0.0, frameGeometry.y * scale, 0.0);
+    p += (cc_matViewInv[0].xyz * a_position.x + cc_matViewInv[1].xyz * a_position.y) * frameGeometry.x * scale;
+    #if USE_INSTANCING
+      v_uv = a_texCoord * a_frameUV.xy + a_frameUV.zw;
+      v_flash = a_frameFlash.x;
+    #else
+      v_uv = a_texCoord;
+      v_flash = 0.0;
+    #endif
+    return cc_matViewProj * vec4(p, 1.0);
+  }
+}%
+CCProgram frame-fs %{
+  precision highp float;
+  uniform sampler2D mainTexture;
+  in vec2 v_uv;
+  in float v_flash;
+  vec4 frag () {
+    vec4 color = texture(mainTexture, v_uv);
+    if (color.a < 0.45) discard;
+    return vec4(mix(color.rgb, vec3(1.0), v_flash), 1.0);
+  }
+}%

@@ -1,0 +1,14 @@
+node_modules/
+library/
+temp/
+build/
+profiles/
+.creator/
+试玩成品/
+tools/backups/
+tools/level-studio/data/
+tools/runtime/
+tools/*-reference/
+tools/*-preview/
+Thumbs.db
+.DS_Store

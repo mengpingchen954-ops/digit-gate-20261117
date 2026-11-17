@@ -1,0 +1,117 @@
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: blast-vs:vert
+      frag: blast-fs:frag
+      rasterizerState: { cullMode: none }
+      depthStencilState: { depthTest: true, depthWrite: false }
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendSrcAlpha: one
+          blendDstAlpha: one_minus_src_alpha
+      properties:
+        tint: { value: [1, 0.34, 0.045, 1], editor: { type: color, displayName: 爆炸颜色 } }
+        phase: { value: [0.23, 0, 1.4, 0], editor: { displayName: 进度_层级_亮度 } }
+        shape: { value: [1.55, 1.8, 0, 0], editor: { displayName: 范围_高度 } }
+}%
+CCProgram blast-vs %{
+  precision highp float;
+  #if USE_INSTANCING
+    in vec4 a_matWorld0;
+    in vec4 a_matWorld1;
+    in vec4 a_matWorld2;
+  #endif
+  #include <builtin/uniforms/cc-global>
+  #include <legacy/local-batch>
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+  out vec2 v_uv;
+  out float v_life;
+  uniform BlastGlow { vec4 tint; vec4 phase; vec4 shape; };
+  vec4 vert () {
+    mat4 world;
+    CCGetWorldMatrix(world);
+    vec3 p = a_position;
+    v_uv = a_texCoord;
+    v_life = 1.0;
+    float t = phase.x;
+    float expand = 1.0 - pow(1.0 - min(t * 2.0, 1.0), 3.0);
+    if (phase.y < 0.5) {
+      p.xz *= shape.x;
+    } else if (phase.y < 1.5) {
+      float y = a_texCoord.y;
+      float crown = (0.22 + expand * 0.6) * (1.0 - y * 0.7);
+      p.xz *= crown * shape.x;
+      p.y = y * shape.y * (0.25 + expand * 0.75);
+    } else {
+      float seed = a_color.r;
+      float life = clamp((t - seed * 0.08) / (0.55 + seed * 0.3), 0.0, 1.0);
+      float angle = seed * 67.37;
+      float radius = shape.x * (0.07 + life * (0.42 + seed * 0.58));
+      vec3 center = vec3(cos(angle) * radius, shape.y * (sin(life * 3.141593) * (0.25 + seed * 0.7) + 0.04), sin(angle) * radius);
+      float size = (0.024 + a_color.g * 0.039) * (1.0 - life * 0.45);
+      vec4 position = world * vec4(center, 1.0);
+      position.xyz += (cc_matViewInv[0].xyz * (v_uv.x * 2.0 - 1.0)
+        + cc_matViewInv[1].xyz * (v_uv.y * 2.0 - 1.0)) * size * length(world[0].xyz);
+      v_life = smoothstep(0.0, 0.04, life) * (1.0 - smoothstep(0.5, 1.0, life));
+      return cc_matViewProj * position;
+    }
+    return cc_matViewProj * world * vec4(p, 1.0);
+  }
+}%
+CCProgram blast-fs %{
+  precision highp float;
+  in vec2 v_uv;
+  in float v_life;
+  uniform BlastGlow { vec4 tint; vec4 phase; vec4 shape; };
+  float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+  float noise(vec2 p) {
+    vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
+    return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x), mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0)), f.x), f.y);
+  }
+  float band(float d, float width) { return 1.0 - smoothstep(width * 0.2, width, abs(d)); }
+  vec4 frag () {
+    float t = phase.x;
+    float fade = smoothstep(0.0, 0.025, t) * (1.0 - smoothstep(0.5, 1.0, t));
+    float glow = 0.0, core = 0.0, ash = 0.0;
+    if (phase.y < 0.5) {
+      vec2 p = v_uv * 2.0 - 1.0;
+      float r = length(p), a = atan(p.y, p.x);
+      float turbulence = noise(p * 9.0 + t * 1.3);
+      float radius = 0.08 + 0.78 * (1.0 - pow(1.0 - min(t * 1.8, 1.0), 3.0));
+      float shock = band(r - radius + (turbulence - 0.5) * 0.025, 0.055) * (1.0 - smoothstep(0.35, 0.92, t));
+      float second = band(r - radius * 0.77, 0.017) * 0.3;
+      float cracks = pow(max(0.0, cos(a * 9.0 + noise(p * 6.0) * 2.5)), 30.0)
+        * smoothstep(0.07, 0.16, r) * (1.0 - smoothstep(0.35, 0.67, r));
+      float flash = exp(-r * r * 16.0) * (1.0 - smoothstep(0.08, 0.4, t));
+      glow = shock + second + cracks * 0.9 + flash;
+      core = shock * 0.8 + flash;
+      ash = exp(-r * r * 9.0) * (0.3 + turbulence * 0.4) * smoothstep(0.08, 0.32, t);
+    } else if (phase.y < 1.5) {
+      float u = v_uv.x, y = v_uv.y;
+      vec2 circular = vec2(cos(u * 6.283185), sin(u * 6.283185));
+      float n = noise(circular * 5.0 + vec2(y * 5.0, -t * 7.0));
+      n = n * 0.7 + noise(circular * 11.0 + vec2(y * 9.0, -t * 12.0)) * 0.3;
+      float top = (0.35 + n * 0.55) * (1.0 - t * 0.7);
+      float flame = (1.0 - smoothstep(top - 0.22, top, y)) * smoothstep(0.0, 0.045, y);
+      glow = flame * (0.2 + n * 0.8) * (1.0 - smoothstep(0.15, 0.7, t));
+      core = flame * (1.0 - smoothstep(0.04, 0.3, y)) * (1.0 - t) * 0.9;
+      ash = flame * smoothstep(0.15, 0.65, t) * (0.15 + n * 0.25);
+    } else {
+      vec2 p = abs(v_uv * 2.0 - 1.0);
+      float shard = 1.0 - smoothstep(0.12, 0.5, p.x + p.y * 0.55);
+      glow = shard + band(p.x, 0.075) * pow(1.0 - p.y, 3.0) * 0.5;
+      core = shard * 0.8;
+      fade = v_life;
+    }
+    float opacity = clamp((glow + ash) * fade * phase.z * tint.a, 0.0, 1.0);
+    if (opacity < 0.004) discard;
+    vec3 fire = mix(tint.rgb, vec3(1.0, 0.93, 0.55), clamp(core, 0.0, 1.0));
+    vec3 color = mix(vec3(0.17, 0.085, 0.08), fire, clamp(glow / max(glow + ash, 0.001), 0.0, 1.0));
+    return vec4(color, opacity);
+  }
+}%

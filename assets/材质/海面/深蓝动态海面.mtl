@@ -1,0 +1,26 @@
+{
+  "__type__": "cc.Material",
+  "_name": "深蓝动态海面",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
+  "_effectAsset": { "__uuid__": "8b7f3c0d-ea41-4b23-9c52-10d97f2436a8", "__expectedType__": "cc.EffectAsset" },
+  "_techIdx": 0,
+  "_defines": [{}],
+  "_states": [{}],
+  "_props": [{
+    "waveMap": { "__uuid__": "daf080f2-7418-4dee-8031-13d912953e3b@6c48a", "__expectedType__": "cc.Texture2D" },
+    "deepColor": { "__type__": "cc.Color", "r": 33, "g": 45, "b": 77, "a": 255 },
+    "shallowColor": { "__type__": "cc.Color", "r": 45, "g": 58, "b": 93, "a": 255 },
+    "crestColor": { "__type__": "cc.Color", "r": 62, "g": 77, "b": 118, "a": 255 },
+    "waveDensity": { "__type__": "cc.Vec2", "x": 0.14, "y": 0.14 },
+    "distortion": 0.035,
+    "flowSpeed": 1,
+    "flowA": { "__type__": "cc.Vec2", "x": 0.024, "y": -0.012 },
+    "flowB": { "__type__": "cc.Vec2", "x": -0.019, "y": 0.011 },
+    "detailScale": 1.71,
+    "highlightStrength": 0.3,
+    "waveContrast": 0.9,
+    "fresnelStrength": 0.12
+  }]
+}

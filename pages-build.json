@@ -1,0 +1,41 @@
+{
+  "debug": false,
+  "platform": "web-mobile",
+  "outputName": "web-mobile",
+  "taskName": "GitHub Pages",
+  "name": "digitgate",
+  "buildPath": "project://build",
+  "mainBundleCompressionType": "merge_dep",
+  "md5Cache": false,
+  "skipCompressTexture": false,
+  "sourceMaps": false,
+  "nativeCodeBundleMode": "asmjs",
+  "polyfills": {
+    "asyncFunctions": true
+  },
+  "experimentalEraseModules": true,
+  "startSceneAssetBundle": false,
+  "bundleConfigs": [],
+  "useBuiltinServer": false,
+  "mainBundleIsRemote": false,
+  "useSplashScreen": true,
+  "bundleCommonChunk": false,
+  "packAutoAtlas": true,
+  "startScene": "e26a1c6f-fd17-4e70-85c0-1a6dd541906c",
+  "scenes": [
+    {
+      "url": "db://assets/Map/scene-1.scene",
+      "uuid": "e26a1c6f-fd17-4e70-85c0-1a6dd541906c"
+    }
+  ],
+  "wasmCompressionMode": false,
+  "packages": {
+    "web-mobile": {
+      "orientation": "auto",
+      "embedWebDebugger": false,
+      "cullEngineAsmJsModule": true,
+      "__version__": "1.0.1"
+    }
+  },
+  "logDest": "project://temp/pages-build.log"
+}

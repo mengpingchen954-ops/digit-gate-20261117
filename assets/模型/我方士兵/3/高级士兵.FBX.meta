@@ -1,0 +1,285 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "4ad1f7da-db27-40b8-851d-ad667b644661",
+  "files": [],
+  "subMetas": {
+    "24296": {
+      "importer": "gltf-material",
+      "uuid": "4ad1f7da-db27-40b8-851d-ad667b644661@24296",
+      "displayName": "",
+      "id": "24296",
+      "name": "手套鞋1.material",
+      "userData": {
+        "gltfIndex": 6
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c5701": {
+      "importer": "gltf-mesh",
+      "uuid": "4ad1f7da-db27-40b8-851d-ad667b644661@c5701",
+      "displayName": "",
+      "id": "c5701",
+      "name": "高级士兵.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 156132
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "4ad1f7da-db27-40b8-851d-ad667b644661@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 76
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0c5df": {
+      "importer": "gltf-material",
+      "uuid": "4ad1f7da-db27-40b8-851d-ad667b644661@0c5df",
+      "displayName": "",
+      "id": "0c5df",
+      "name": "内衬1.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ceb1e": {
+      "importer": "gltf-material",
+      "uuid": "4ad1f7da-db27-40b8-851d-ad667b644661@ceb1e",
+      "displayName": "",
+      "id": "ceb1e",
+      "name": "内衬红.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "173c6": {
+      "importer": "gltf-material",
+      "uuid": "4ad1f7da-db27-40b8-851d-ad667b644661@173c6",
+      "displayName": "",
+      "id": "173c6",
+      "name": "金.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a1e6c": {
+      "importer": "gltf-material",
+      "uuid": "4ad1f7da-db27-40b8-851d-ad667b644661@a1e6c",
+      "displayName": "",
+      "id": "a1e6c",
+      "name": "头盔红.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7fc12": {
+      "importer": "gltf-material",
+      "uuid": "4ad1f7da-db27-40b8-851d-ad667b644661@7fc12",
+      "displayName": "",
+      "id": "7fc12",
+      "name": "M_Glass_Clear1.material",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ac837": {
+      "importer": "gltf-material",
+      "uuid": "4ad1f7da-db27-40b8-851d-ad667b644661@ac837",
+      "displayName": "",
+      "id": "ac837",
+      "name": "身体.material",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4b43a": {
+      "importer": "gltf-material",
+      "uuid": "4ad1f7da-db27-40b8-851d-ad667b644661@4b43a",
+      "displayName": "",
+      "id": "4b43a",
+      "name": "枪身1.material",
+      "userData": {
+        "gltfIndex": 7
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "85c9e": {
+      "importer": "gltf-material",
+      "uuid": "4ad1f7da-db27-40b8-851d-ad667b644661@85c9e",
+      "displayName": "",
+      "id": "85c9e",
+      "name": "枪身1_8.material",
+      "userData": {
+        "gltfIndex": 8
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a5b06": {
+      "importer": "gltf-material",
+      "uuid": "4ad1f7da-db27-40b8-851d-ad667b644661@a5b06",
+      "displayName": "",
+      "id": "a5b06",
+      "name": "头盔红_9.material",
+      "userData": {
+        "gltfIndex": 9
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6ffb9": {
+      "importer": "gltf-material",
+      "uuid": "4ad1f7da-db27-40b8-851d-ad667b644661@6ffb9",
+      "displayName": "",
+      "id": "6ffb9",
+      "name": "枪管.material",
+      "userData": {
+        "gltfIndex": 10
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1ac66": {
+      "importer": "gltf-scene",
+      "uuid": "4ad1f7da-db27-40b8-851d-ad667b644661@1ac66",
+      "displayName": "",
+      "id": "1ac66",
+      "name": "高级士兵.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "4ad1f7da-db27-40b8-851d-ad667b644661@c5701"
+      ],
+      "skeletons": [
+        "4ad1f7da-db27-40b8-851d-ad667b644661@438fe"
+      ],
+      "textures": [],
+      "materials": [
+        "4ad1f7da-db27-40b8-851d-ad667b644661@0c5df",
+        "4ad1f7da-db27-40b8-851d-ad667b644661@ceb1e",
+        "4ad1f7da-db27-40b8-851d-ad667b644661@173c6",
+        "4ad1f7da-db27-40b8-851d-ad667b644661@a1e6c",
+        "4ad1f7da-db27-40b8-851d-ad667b644661@7fc12",
+        "4ad1f7da-db27-40b8-851d-ad667b644661@ac837",
+        "4ad1f7da-db27-40b8-851d-ad667b644661@24296",
+        "4ad1f7da-db27-40b8-851d-ad667b644661@4b43a",
+        "4ad1f7da-db27-40b8-851d-ad667b644661@85c9e",
+        "4ad1f7da-db27-40b8-851d-ad667b644661@a5b06",
+        "4ad1f7da-db27-40b8-851d-ad667b644661@6ffb9"
+      ],
+      "scenes": [
+        "4ad1f7da-db27-40b8-851d-ad667b644661@1ac66"
+      ]
+    }
+  }
+}

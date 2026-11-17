@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "sourceUuid": "6289570d-f1cf-4ee1-9cfc-08dde955d41f",
+  "sourceName": "我方士兵_1级",
+  "size": 124,
+  "padding": 2,
+  "tile": 128,
+  "columns": 16,
+  "rows": 5,
+  "directions": 1,
+  "span": 1.3692900043851068,
+  "centerY": 0.356980383962535,
+  "cameraPitch": -34.001,
+  "actions": [
+    {
+      "name": "原地射击",
+      "duration": 0.3333333333333333,
+      "events": [],
+      "start": 0,
+      "frames": 8
+    },
+    {
+      "name": "向左挪",
+      "duration": 0.7,
+      "events": [],
+      "start": 8,
+      "frames": 17
+    },
+    {
+      "name": "向右挪",
+      "duration": 0.7,
+      "events": [],
+      "start": 25,
+      "frames": 17
+    },
+    {
+      "name": "死亡",
+      "duration": 1.1333333333333333,
+      "events": [],
+      "start": 42,
+      "frames": 28
+    }
+  ]
+}

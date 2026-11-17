@@ -1,0 +1,113 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "9977fe53-d1c2-4ec6-88a0-59b586b746d7",
+  "files": [],
+  "subMetas": {
+    "23723": {
+      "importer": "gltf-mesh",
+      "uuid": "9977fe53-d1c2-4ec6-88a0-59b586b746d7@23723",
+      "displayName": "",
+      "id": "23723",
+      "name": "Sparkles.mesh",
+      "userData": {
+        "gltfIndex": 2,
+        "triangleCount": 64
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "74dce": {
+      "importer": "gltf-mesh",
+      "uuid": "9977fe53-d1c2-4ec6-88a0-59b586b746d7@74dce",
+      "displayName": "",
+      "id": "74dce",
+      "name": "Ground.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 2
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c244a": {
+      "importer": "gltf-mesh",
+      "uuid": "9977fe53-d1c2-4ec6-88a0-59b586b746d7@c244a",
+      "displayName": "",
+      "id": "c244a",
+      "name": "Cylinder.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 640
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "218d1": {
+      "importer": "gltf-scene",
+      "uuid": "9977fe53-d1c2-4ec6-88a0-59b586b746d7@218d1",
+      "displayName": "",
+      "id": "218d1",
+      "name": "UpgradeEnergy.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "9977fe53-d1c2-4ec6-88a0-59b586b746d7@74dce",
+        "9977fe53-d1c2-4ec6-88a0-59b586b746d7@c244a",
+        "9977fe53-d1c2-4ec6-88a0-59b586b746d7@23723"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "9977fe53-d1c2-4ec6-88a0-59b586b746d7@218d1"
+      ]
+    }
+  }
+}

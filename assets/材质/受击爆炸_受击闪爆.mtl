@@ -1,0 +1,60 @@
+{
+  "__type__": "cc.Material",
+  "_name": "受击爆炸_受击闪爆",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "9642da3b-1811-4be1-8c35-39a16378e603",
+    "__expectedType__": "cc.EffectAsset"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {
+      "USE_INSTANCING": false,
+      "CC_USE_HDR": true,
+      "CC_USE_FLOAT_OUTPUT": false,
+      "CC_SHADOWMAP_FORMAT": 0,
+      "CC_SHADOWMAP_USE_LINEAR_DEPTH": 0,
+      "CC_SUPPORT_CASCADED_SHADOW_MAP": true,
+      "CC_SHADOW_TYPE": 2,
+      "CC_DIR_SHADOW_PCF_TYPE": 2,
+      "CC_DIR_LIGHT_SHADOW_TYPE": 0,
+      "CC_CASCADED_LAYERS_TRANSITION": false,
+      "CC_USE_IBL": 2,
+      "CC_USE_DIFFUSEMAP": 0,
+      "CC_IBL_CONVOLUTED": false,
+      "CC_USE_FOG": 4,
+      "CC_USE_ACCURATE_FOG": 0,
+      "CC_TONE_MAPPING_TYPE": 0
+    }
+  ],
+  "_states": [
+    {}
+  ],
+  "_props": [
+    {
+      "phase": {
+        "__type__": "cc.Vec4",
+        "x": 0.22,
+        "y": 0,
+        "z": 1.5,
+        "w": 0
+      },
+      "shape": {
+        "__type__": "cc.Vec4",
+        "x": 0.46,
+        "y": 0.82,
+        "z": 0,
+        "w": 0
+      },
+      "tint": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 239,
+        "b": 85,
+        "a": 255
+      }
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "__type__": "cc.Material",
+  "_name": "Boss2_武器",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "9b20a514-6cc3-49de-b216-b6b863046249"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {
+      "USE_OUTLINE_PASS": true
+    },
+    {
+      "USE_BASE_COLOR_MAP": true,
+      "BASE_COLOR_MAP_AS_SHADE_MAP_1": true,
+      "BASE_COLOR_MAP_AS_SHADE_MAP_2": true,
+      "USE_NORMAL_MAP": true
+    },
+    {
+      "USE_BASE_COLOR_MAP": true,
+      "BASE_COLOR_MAP_AS_SHADE_MAP_1": true,
+      "BASE_COLOR_MAP_AS_SHADE_MAP_2": true,
+      "USE_NORMAL_MAP": true
+    },
+    {
+      "USE_BASE_COLOR_MAP": true
+    },
+    {},
+    {
+      "USE_OUTLINE_PASS": true
+    },
+    {
+      "USE_BASE_COLOR_MAP": true,
+      "BASE_COLOR_MAP_AS_SHADE_MAP_1": true,
+      "BASE_COLOR_MAP_AS_SHADE_MAP_2": true,
+      "USE_NORMAL_MAP": true
+    }
+  ],
+  "_props": [
+    {
+      "lineWidth": 7,
+      "depthBias": 0,
+      "baseColor": {
+        "__type__": "cc.Color",
+        "r": 33,
+        "g": 24,
+        "b": 23,
+        "a": 255
+      }
+    },
+    {
+      "mainColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255
+      },
+      "mainTexture": {
+        "__uuid__": "1123447c-947f-4cb9-a673-4d8e65825923@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "normalMap": {
+        "__uuid__": "a5c78992-c440-49fc-a4d3-b9a87b6a57e0@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "shadeColor1": {
+        "__type__": "cc.Color",
+        "r": 180,
+        "g": 171,
+        "b": 154,
+        "a": 255
+      },
+      "shadeColor2": {
+        "__type__": "cc.Color",
+        "r": 109,
+        "g": 97,
+        "b": 86,
+        "a": 255
+      },
+      "baseStep": 0.78,
+      "shadeStep": 0.42,
+      "baseFeather": 0.04,
+      "shadeFeather": 0.04,
+      "normalStrength": 0.65
+    }
+  ]
+}

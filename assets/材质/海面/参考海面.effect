@@ -1,0 +1,79 @@
+// 深蓝底色 + 两层交错波纹。使用世界坐标，缩放水面不会把波纹拉伸。
+CCEffect %{
+  techniques:
+  - name: ocean
+    passes:
+    - vert: ocean-vs:vert
+      frag: ocean-fs:frag
+      rasterizerState: { cullMode: none }
+      depthStencilState: { depthTest: true, depthWrite: true }
+      properties:
+        waveMap: { value: grey, editor: { displayName: 波纹贴图 } }
+        deepColor: { value: [0.1294, 0.1765, 0.3020, 1], linear: true, editor: { type: color, displayName: 深海底色 } }
+        shallowColor: { value: [0.1765, 0.2275, 0.3647, 1], linear: true, editor: { type: color, displayName: 波面颜色 } }
+        crestColor: { value: [0.2431, 0.3020, 0.4627, 1], linear: true, editor: { type: color, displayName: 波峰亮色 } }
+        waveDensity: { value: [0.14, 0.14], target: uvParams.xy, editor: { displayName: 波纹密度, tooltip: 数值越大波纹越细；按世界坐标平铺 } }
+        distortion: { value: 0.035, target: uvParams.z, editor: { displayName: 波纹扭动, range: [0, 0.15], slide: true } }
+        flowSpeed: { value: 1, target: uvParams.w, editor: { displayName: 流动速度, range: [0, 3], slide: true } }
+        flowA: { value: [0.024, -0.012], target: flowParams.xy, editor: { displayName: 主波纹方向 } }
+        flowB: { value: [-0.019, 0.011], target: flowParams.zw, editor: { displayName: 次波纹方向 } }
+        detailScale: { value: 1.71, target: waveParams.x, editor: { displayName: 次波纹密度, range: [1, 4], slide: true } }
+        highlightStrength: { value: 0.3, target: waveParams.y, editor: { displayName: 波光强度, range: [0, 2], slide: true } }
+        waveContrast: { value: 0.9, target: waveParams.z, editor: { displayName: 波纹对比, range: [0.5, 2], slide: true } }
+        fresnelStrength: { value: 0.12, target: waveParams.w, editor: { displayName: 远处反光, range: [0, 0.5], slide: true } }
+}%
+
+CCProgram ocean-vs %{
+  precision highp float;
+  #include <legacy/input>
+  #include <builtin/uniforms/cc-global>
+  #include <legacy/local-batch>
+
+  out vec3 v_worldPos;
+
+  vec4 vert () {
+    vec4 position;
+    CCVertInput(position);
+    mat4 world;
+    CCGetWorldMatrix(world);
+    vec4 worldPosition = world * position;
+    v_worldPos = worldPosition.xyz;
+    return cc_matProj * cc_matView * worldPosition;
+  }
+}%
+
+CCProgram ocean-fs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #include <legacy/output-standard>
+
+  in vec3 v_worldPos;
+  uniform sampler2D waveMap;
+  uniform Ocean {
+    vec4 deepColor;
+    vec4 shallowColor;
+    vec4 crestColor;
+    vec4 uvParams;
+    vec4 flowParams;
+    vec4 waveParams;
+  };
+
+  vec4 frag () {
+    float t = cc_time.x * uvParams.w;
+    vec2 uv = v_worldPos.xz * uvParams.xy;
+    vec2 warp = vec2(sin(uv.y * 4.7 + t * 0.23), cos(uv.x * 4.1 - t * 0.19)) * uvParams.z;
+    float a = texture(waveMap, uv + warp + flowParams.xy * t).r;
+    // 小角度交错，保留参考图横向细碎波光，避免看成两张整图平移。
+    vec2 crossed = vec2(uv.x * 0.956 - uv.y * 0.292, uv.x * 0.292 + uv.y * 0.956);
+    float b = texture(waveMap, crossed * waveParams.x - warp + flowParams.zw * t + vec2(0.37, 0.19)).r;
+    float detail = texture(waveMap, uv * 3.61 + warp * 0.5 + flowParams.zw * t * 0.7).r;
+    float height = clamp((a * 0.60 + b * 0.31 + detail * 0.09) * waveParams.z, 0.0, 1.0);
+    float body = smoothstep(0.015, 0.52, height);
+    float crest = smoothstep(0.25, 0.8, height) * waveParams.y;
+    vec3 viewDirection = normalize(cc_cameraPos.xyz - v_worldPos);
+    float grazing = pow(1.0 - abs(viewDirection.y), 3.0) * waveParams.w;
+    vec3 color = mix(deepColor.rgb, shallowColor.rgb, body);
+    color = mix(color, crestColor.rgb, clamp(crest + grazing, 0.0, 1.0));
+    return CCFragOutput(vec4(color, 1.0));
+  }
+}%

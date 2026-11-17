@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "sourceUuid": "a4fbede8-1bdf-4352-b242-e3c10fe7ce8e",
+  "sourceName": "我方士兵_3级",
+  "size": 124,
+  "padding": 2,
+  "tile": 128,
+  "columns": 16,
+  "rows": 4,
+  "directions": 1,
+  "span": 4.064434384475165,
+  "centerY": -0.3829800720117922,
+  "cameraPitch": -34.001,
+  "actions": [
+    {
+      "name": "加特林左移射击",
+      "duration": 0.7,
+      "events": [],
+      "start": 0,
+      "frames": 17
+    },
+    {
+      "name": "加特林右移射击",
+      "duration": 0.7,
+      "events": [],
+      "start": 17,
+      "frames": 17
+    },
+    {
+      "name": "死亡",
+      "duration": 1.2333333333333334,
+      "events": [],
+      "start": 34,
+      "frames": 30
+    }
+  ]
+}

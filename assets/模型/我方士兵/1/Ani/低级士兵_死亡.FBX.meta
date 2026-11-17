@@ -1,0 +1,275 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "6e022025-c0b5-4686-9b2a-1c65ecd40d93",
+  "files": [
+    "__original-animation-0.bin"
+  ],
+  "subMetas": {
+    "637b7": {
+      "importer": "gltf-mesh",
+      "uuid": "6e022025-c0b5-4686-9b2a-1c65ecd40d93@637b7",
+      "displayName": "",
+      "id": "637b7",
+      "name": "shibing_skin.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 33150
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "083c5": {
+      "importer": "gltf-animation",
+      "uuid": "6e022025-c0b5-4686-9b2a-1c65ecd40d93@083c5",
+      "displayName": "",
+      "id": "083c5",
+      "name": "Unreal Take.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.100000023841858
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "6e022025-c0b5-4686-9b2a-1c65ecd40d93@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 104
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a2038": {
+      "importer": "gltf-material",
+      "uuid": "6e022025-c0b5-4686-9b2a-1c65ecd40d93@a2038",
+      "displayName": "",
+      "id": "a2038",
+      "name": "白金.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "54de7": {
+      "importer": "gltf-material",
+      "uuid": "6e022025-c0b5-4686-9b2a-1c65ecd40d93@54de7",
+      "displayName": "",
+      "id": "54de7",
+      "name": "手套.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "efe51": {
+      "importer": "gltf-material",
+      "uuid": "6e022025-c0b5-4686-9b2a-1c65ecd40d93@efe51",
+      "displayName": "",
+      "id": "efe51",
+      "name": "红钢铁.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f5f25": {
+      "importer": "gltf-material",
+      "uuid": "6e022025-c0b5-4686-9b2a-1c65ecd40d93@f5f25",
+      "displayName": "",
+      "id": "f5f25",
+      "name": "红钢铁_3.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ac837": {
+      "importer": "gltf-material",
+      "uuid": "6e022025-c0b5-4686-9b2a-1c65ecd40d93@ac837",
+      "displayName": "",
+      "id": "ac837",
+      "name": "身体.material",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4f023": {
+      "importer": "gltf-material",
+      "uuid": "6e022025-c0b5-4686-9b2a-1c65ecd40d93@4f023",
+      "displayName": "",
+      "id": "4f023",
+      "name": "白金_5.material",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b1b73": {
+      "importer": "gltf-material",
+      "uuid": "6e022025-c0b5-4686-9b2a-1c65ecd40d93@b1b73",
+      "displayName": "",
+      "id": "b1b73",
+      "name": "黑金.material",
+      "userData": {
+        "gltfIndex": 6
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "62bf1": {
+      "importer": "gltf-material",
+      "uuid": "6e022025-c0b5-4686-9b2a-1c65ecd40d93@62bf1",
+      "displayName": "",
+      "id": "62bf1",
+      "name": "身体_7.material",
+      "userData": {
+        "gltfIndex": 7
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "186fe": {
+      "importer": "gltf-scene",
+      "uuid": "6e022025-c0b5-4686-9b2a-1c65ecd40d93@186fe",
+      "displayName": "",
+      "id": "186fe",
+      "name": "低级士兵_死亡.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "Unreal Take",
+        "duration": 1.100000023841858,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Unreal Take",
+            "from": 0,
+            "to": 1.100000023841858,
+            "wrapMode": 2,
+            "previousId": "083c5"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "6e022025-c0b5-4686-9b2a-1c65ecd40d93@637b7"
+      ],
+      "skeletons": [
+        "6e022025-c0b5-4686-9b2a-1c65ecd40d93@438fe"
+      ],
+      "textures": [],
+      "materials": [
+        "6e022025-c0b5-4686-9b2a-1c65ecd40d93@a2038",
+        "6e022025-c0b5-4686-9b2a-1c65ecd40d93@54de7",
+        "6e022025-c0b5-4686-9b2a-1c65ecd40d93@efe51",
+        "6e022025-c0b5-4686-9b2a-1c65ecd40d93@f5f25",
+        "6e022025-c0b5-4686-9b2a-1c65ecd40d93@ac837",
+        "6e022025-c0b5-4686-9b2a-1c65ecd40d93@4f023",
+        "6e022025-c0b5-4686-9b2a-1c65ecd40d93@b1b73",
+        "6e022025-c0b5-4686-9b2a-1c65ecd40d93@62bf1"
+      ],
+      "scenes": [
+        "6e022025-c0b5-4686-9b2a-1c65ecd40d93@186fe"
+      ]
+    }
+  }
+}

@@ -1,0 +1,75 @@
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: hit-vs:vert
+      frag: hit-fs:frag
+      rasterizerState: { cullMode: none }
+      depthStencilState: { depthTest: true, depthWrite: false }
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendSrcAlpha: one
+          blendDstAlpha: one_minus_src_alpha
+      properties:
+        tint: { value: [1, 0.84, 0.2, 1], editor: { type: color, displayName: 受击颜色 } }
+        phase: { value: [0.22, 0, 1.5, 0], editor: { displayName: 进度_层级_亮度 } }
+        shape: { value: [0.46, 0.82, 0, 0], editor: { displayName: 范围_高度 } }
+}%
+CCProgram hit-vs %{
+  precision highp float;
+  #if USE_INSTANCING
+    in vec4 a_matWorld0;
+    in vec4 a_matWorld1;
+    in vec4 a_matWorld2;
+  #endif
+  #include <builtin/uniforms/cc-global>
+  #include <legacy/local-batch>
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  out vec2 v_uv;
+  uniform HitGlow { vec4 tint; vec4 phase; vec4 shape; };
+  vec4 vert () {
+    mat4 world;
+    CCGetWorldMatrix(world);
+    v_uv = a_texCoord;
+    vec4 position = world * vec4(0.0, 0.0, 0.0, 1.0);
+    float size = shape.x * length(world[0].xyz);
+    // 面向相机的命中闪爆，单个四边形完成全部层次。
+    position.xyz += (cc_matViewInv[0].xyz * (v_uv.x * 2.0 - 1.0)
+      + cc_matViewInv[1].xyz * (v_uv.y * 2.0 - 1.0)) * size;
+    return cc_matViewProj * position;
+  }
+}%
+CCProgram hit-fs %{
+  precision highp float;
+  in vec2 v_uv;
+  uniform HitGlow { vec4 tint; vec4 phase; vec4 shape; };
+  float line(float d, float width) { return 1.0 - smoothstep(width * 0.2, width, abs(d)); }
+  vec4 frag () {
+    float t = phase.x;
+    vec2 p = v_uv * 2.0 - 1.0;
+    float r = length(p), a = atan(p.y, p.x);
+    float fade = smoothstep(0.0, 0.025, t) * (1.0 - smoothstep(0.35, 1.0, t));
+    float expand = 1.0 - pow(1.0 - t, 3.0);
+    float ringRadius = 0.08 + expand * 0.71;
+    float shock = line(r - ringRadius, 0.052) * (1.0 - smoothstep(0.28, 0.75, t));
+    float inner = line(r - ringRadius * 0.72, 0.018) * (1.0 - t) * 0.28;
+    float sector = (a + 3.141593) * 1.909859;
+    float id = floor(sector);
+    float seed = fract(sin(id * 31.73 + 4.0) * 437.11);
+    float head = 0.11 + expand * (0.48 + seed * 0.39);
+    float tail = head - mix(0.30, 0.09, t) * (0.5 + seed);
+    float spark = line(fract(sector) - 0.5, 0.034 + seed * 0.048)
+      * smoothstep(tail, tail + 0.045, r) * (1.0 - smoothstep(head, head + 0.02, r));
+    float flare = exp(-r * r * 32.0) * (1.0 - smoothstep(0.08, 0.4, t));
+    float star = pow(max(0.0, cos(a * 4.0 + 0.6)), 18.0)
+      * (1.0 - smoothstep(0.08, 0.38 - t * 0.12, r)) * (1.0 - smoothstep(0.1, 0.45, t));
+    float hot = flare + spark * 0.65 + star * 0.8;
+    float halo = exp(-r * r * 7.0) * (1.0 - t) * 0.13;
+    float opacity = clamp((shock * 0.8 + inner + spark + flare + star + halo) * fade * phase.z, 0.0, 1.0);
+    if (opacity < 0.004) discard;
+    return vec4(mix(tint.rgb, vec3(1.0), clamp(hot, 0.0, 0.95)), opacity * tint.a);
+  }
+}%

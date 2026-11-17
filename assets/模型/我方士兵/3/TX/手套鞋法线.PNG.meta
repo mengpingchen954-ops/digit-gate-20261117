@@ -1,0 +1,46 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "201ec488-556a-4bc4-a817-e3fdc46fce74",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "201ec488-556a-4bc4-a817-e3fdc46fce74@6c48a",
+      "displayName": "手套鞋法线",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "201ec488-556a-4bc4-a817-e3fdc46fce74",
+        "visible": false
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "201ec488-556a-4bc4-a817-e3fdc46fce74@6c48a",
+    "compressSettings": {
+      "useCompressTexture": true,
+      "presetId": "digitgate-webp"
+    }
+  }
+}

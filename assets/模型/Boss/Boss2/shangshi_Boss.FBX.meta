@@ -1,0 +1,132 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "c1a10747-13db-45d1-96f4-6a700023f5dd",
+  "files": [],
+  "subMetas": {
+    "d3ddb": {
+      "importer": "gltf-mesh",
+      "uuid": "c1a10747-13db-45d1-96f4-6a700023f5dd@d3ddb",
+      "displayName": "",
+      "id": "d3ddb",
+      "name": "shangshi_Boss.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 8804
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "c1a10747-13db-45d1-96f4-6a700023f5dd@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 58
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3faaf": {
+      "importer": "gltf-material",
+      "uuid": "c1a10747-13db-45d1-96f4-6a700023f5dd@3faaf",
+      "displayName": "",
+      "id": "3faaf",
+      "name": "身体1.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d0dcb": {
+      "importer": "gltf-material",
+      "uuid": "c1a10747-13db-45d1-96f4-6a700023f5dd@d0dcb",
+      "displayName": "",
+      "id": "d0dcb",
+      "name": "武器.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "bb7af": {
+      "importer": "gltf-scene",
+      "uuid": "c1a10747-13db-45d1-96f4-6a700023f5dd@bb7af",
+      "displayName": "",
+      "id": "bb7af",
+      "name": "shangshi_Boss.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "c1a10747-13db-45d1-96f4-6a700023f5dd@d3ddb"
+      ],
+      "skeletons": [
+        "c1a10747-13db-45d1-96f4-6a700023f5dd@438fe"
+      ],
+      "textures": [],
+      "materials": [
+        "c1a10747-13db-45d1-96f4-6a700023f5dd@3faaf",
+        "c1a10747-13db-45d1-96f4-6a700023f5dd@d0dcb"
+      ],
+      "scenes": [
+        "c1a10747-13db-45d1-96f4-6a700023f5dd@bb7af"
+      ]
+    }
+  }
+}

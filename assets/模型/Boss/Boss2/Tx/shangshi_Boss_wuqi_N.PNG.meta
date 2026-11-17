@@ -1,0 +1,46 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "a5c78992-c440-49fc-a4d3-b9a87b6a57e0",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "a5c78992-c440-49fc-a4d3-b9a87b6a57e0@6c48a",
+      "displayName": "shangshi_Boss_wuqi_N",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "a5c78992-c440-49fc-a4d3-b9a87b6a57e0",
+        "visible": false
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "a5c78992-c440-49fc-a4d3-b9a87b6a57e0@6c48a",
+    "compressSettings": {
+      "useCompressTexture": true,
+      "presetId": "digitgate-webp"
+    }
+  }
+}

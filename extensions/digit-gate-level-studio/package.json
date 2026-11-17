@@ -1,0 +1,15 @@
+{
+  "name": "digit-gate-level-studio",
+  "title": "数字门关卡工作台",
+  "description": "从 Cocos Creator 顶部菜单打开当前项目的关卡工作台 APP。",
+  "package_version": 2,
+  "version": "1.0.0",
+  "main": "main.js",
+  "contributions": {
+    "scene": { "script": "scene.js" },
+    "menu": [
+      { "path": "关卡工作台", "label": "打开关卡工作台 APP", "message": "open" }
+    ],
+    "messages": { "open": { "methods": ["open"] } }
+  }
+}

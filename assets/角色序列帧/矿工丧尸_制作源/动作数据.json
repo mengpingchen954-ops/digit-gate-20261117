@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "sourceUuid": "bfaf6f69-9b2e-4dd9-8b5b-03bc11114e7c",
+  "sourceName": "矿工丧尸_制作源",
+  "size": 124,
+  "padding": 2,
+  "tile": 128,
+  "columns": 32,
+  "rows": 31,
+  "directions": 8,
+  "span": 1.8117535187949463,
+  "centerY": 0.27694207434152174,
+  "cameraPitch": -33.5,
+  "actions": [
+    {
+      "name": "Run",
+      "duration": 1.3666666666666667,
+      "events": [],
+      "start": 0,
+      "frames": 33
+    },
+    {
+      "name": "Attack",
+      "duration": 1,
+      "events": [
+        {
+          "frame": 0.58,
+          "func": "attackHit",
+          "params": []
+        }
+      ],
+      "start": 264,
+      "frames": 24
+    },
+    {
+      "name": "Death",
+      "duration": 2.7,
+      "events": [],
+      "start": 456,
+      "frames": 65
+    }
+  ]
+}

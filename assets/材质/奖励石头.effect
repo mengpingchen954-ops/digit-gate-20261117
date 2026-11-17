@@ -1,0 +1,68 @@
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: stone-vs:vert
+      frag: stone-outline-fs:frag
+      embeddedMacros: { STONE_OUTLINE: true }
+      rasterizerState: { cullMode: front }
+      depthStencilState: { depthTest: true, depthWrite: false }
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+      properties:
+        tint: { value: [0.56, 0.54, 0.59, 1], editor: { type: color } }
+        feedback: { value: [0, 1.3, 0, 0] }
+    - vert: stone-vs:vert
+      frag: stone-fs:frag
+      rasterizerState: { cullMode: back }
+      depthStencilState: { depthTest: true, depthWrite: true }
+      properties:
+        tint: { value: [0.56, 0.54, 0.59, 1], editor: { type: color } }
+        feedback: { value: [0, 1.3, 0, 0] }
+}%
+CCProgram stone-vs %{
+  precision highp float;
+  in vec3 a_position;
+  in vec3 a_normal;
+  #if USE_INSTANCING
+    in vec4 a_matWorld0;
+    in vec4 a_matWorld1;
+    in vec4 a_matWorld2;
+  #endif
+  #include <legacy/local-batch>
+  #include <builtin/uniforms/cc-global>
+  uniform Stone { vec4 tint; vec4 feedback; };
+  out vec3 v_normal;
+  vec4 vert () {
+    mat4 world;
+    CCGetWorldMatrix(world);
+    v_normal = normalize(mat3(world) * a_normal);
+    vec4 clip = cc_matViewProj * world * vec4(a_position, 1.0);
+    #if STONE_OUTLINE
+      vec2 direction = (cc_matViewProj * vec4(v_normal, 0.0)).xy;
+      direction /= max(length(direction), 0.001);
+      clip.xy += direction * feedback.y * 2.0 * cc_nativeSize.zw * clip.w * feedback.x;
+    #endif
+    return clip;
+  }
+}%
+CCProgram stone-fs %{
+  precision highp float;
+  in vec3 v_normal;
+  uniform Stone { vec4 tint; vec4 feedback; };
+  vec4 frag () {
+    // 无贴图纯色：只保留顶面和侧面的柔和明暗。
+    float light = 0.78 + 0.22 * max(0.0, dot(normalize(v_normal), normalize(vec3(-0.4, 1.0, 0.5))));
+    return vec4(tint.rgb * light, 1.0);
+  }
+}%
+CCProgram stone-outline-fs %{
+  precision highp float;
+  uniform Stone { vec4 tint; vec4 feedback; };
+  vec4 frag () {
+    if (feedback.x < 0.005) discard;
+    return vec4(1.0, 1.0, 1.0, feedback.x * 0.9);
+  }
+}%

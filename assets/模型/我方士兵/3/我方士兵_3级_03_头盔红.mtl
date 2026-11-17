@@ -1,0 +1,91 @@
+{
+  "__type__": "cc.Material",
+  "_name": "我方士兵_3级_03_头盔红",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "9b20a514-6cc3-49de-b216-b6b863046249"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {
+      "USE_OUTLINE_PASS": true,
+      "USE_BASE_COLOR_MAP": true
+    },
+    {
+      "USE_BASE_COLOR_MAP": true,
+      "BASE_COLOR_MAP_AS_SHADE_MAP_1": true,
+      "BASE_COLOR_MAP_AS_SHADE_MAP_2": true,
+      "USE_NORMAL_MAP": true
+    },
+    {
+      "USE_BASE_COLOR_MAP": true,
+      "BASE_COLOR_MAP_AS_SHADE_MAP_1": true,
+      "BASE_COLOR_MAP_AS_SHADE_MAP_2": true,
+      "USE_NORMAL_MAP": true
+    },
+    {
+      "USE_BASE_COLOR_MAP": true
+    },
+    {},
+    {
+      "USE_OUTLINE_PASS": true,
+      "USE_BASE_COLOR_MAP": true
+    },
+    {
+      "USE_BASE_COLOR_MAP": true,
+      "BASE_COLOR_MAP_AS_SHADE_MAP_1": true,
+      "BASE_COLOR_MAP_AS_SHADE_MAP_2": true,
+      "USE_NORMAL_MAP": true
+    }
+  ],
+  "_props": [
+    {
+      "lineWidth": 7,
+      "depthBias": 0,
+      "baseColor": {
+        "__type__": "cc.Color",
+        "r": 25,
+        "g": 29,
+        "b": 37,
+        "a": 255
+      }
+    },
+    {
+      "mainColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255
+      },
+      "mainTexture": {
+        "__uuid__": "4c40f921-4eae-4da8-a8d2-8be62e5cc3b4@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "normalMap": {
+        "__uuid__": "b1dcf0ea-1f62-4084-895a-054352f71878@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "shadeColor1": {
+        "__type__": "cc.Color",
+        "r": 176,
+        "g": 183,
+        "b": 198,
+        "a": 255
+      },
+      "shadeColor2": {
+        "__type__": "cc.Color",
+        "r": 106,
+        "g": 115,
+        "b": 133,
+        "a": 255
+      },
+      "baseStep": 0.78,
+      "shadeStep": 0.42,
+      "baseFeather": 0.04,
+      "shadeFeather": 0.04,
+      "normalStrength": 0.65
+    }
+  ]
+}

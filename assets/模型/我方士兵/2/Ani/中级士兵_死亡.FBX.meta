@@ -1,0 +1,343 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15",
+  "files": [
+    "__original-animation-0.bin"
+  ],
+  "subMetas": {
+    "24296": {
+      "importer": "gltf-material",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@24296",
+      "displayName": "",
+      "id": "24296",
+      "name": "手套鞋1.material",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0a96a": {
+      "importer": "gltf-mesh",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@0a96a",
+      "displayName": "",
+      "id": "0a96a",
+      "name": "高级士兵_skin.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 162650
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "083c5": {
+      "importer": "gltf-animation",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@083c5",
+      "displayName": "",
+      "id": "083c5",
+      "name": "Unreal Take.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.2000000476837158
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 77
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0c5df": {
+      "importer": "gltf-material",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@0c5df",
+      "displayName": "",
+      "id": "0c5df",
+      "name": "内衬1.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ceb1e": {
+      "importer": "gltf-material",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@ceb1e",
+      "displayName": "",
+      "id": "ceb1e",
+      "name": "内衬红.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "173c6": {
+      "importer": "gltf-material",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@173c6",
+      "displayName": "",
+      "id": "173c6",
+      "name": "金.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a1e6c": {
+      "importer": "gltf-material",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@a1e6c",
+      "displayName": "",
+      "id": "a1e6c",
+      "name": "头盔红.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ac837": {
+      "importer": "gltf-material",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@ac837",
+      "displayName": "",
+      "id": "ac837",
+      "name": "身体.material",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "25eef": {
+      "importer": "gltf-material",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@25eef",
+      "displayName": "",
+      "id": "25eef",
+      "name": "M_Hair.material",
+      "userData": {
+        "gltfIndex": 6
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4b43a": {
+      "importer": "gltf-material",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@4b43a",
+      "displayName": "",
+      "id": "4b43a",
+      "name": "枪身1.material",
+      "userData": {
+        "gltfIndex": 7
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "85c9e": {
+      "importer": "gltf-material",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@85c9e",
+      "displayName": "",
+      "id": "85c9e",
+      "name": "枪身1_8.material",
+      "userData": {
+        "gltfIndex": 8
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6ffb9": {
+      "importer": "gltf-material",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@6ffb9",
+      "displayName": "",
+      "id": "6ffb9",
+      "name": "枪管.material",
+      "userData": {
+        "gltfIndex": 9
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fafd3": {
+      "importer": "gltf-material",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@fafd3",
+      "displayName": "",
+      "id": "fafd3",
+      "name": "M_Hair_10.material",
+      "userData": {
+        "gltfIndex": 10
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e30f3": {
+      "importer": "gltf-material",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@e30f3",
+      "displayName": "",
+      "id": "e30f3",
+      "name": "枪身1_11.material",
+      "userData": {
+        "gltfIndex": 11
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2a43e": {
+      "importer": "gltf-scene",
+      "uuid": "023fbb16-f2a0-4308-afa0-75902fa3bc15@2a43e",
+      "displayName": "",
+      "id": "2a43e",
+      "name": "中级士兵_死亡.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "Unreal Take",
+        "duration": 1.2000000476837158,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Unreal Take",
+            "from": 0,
+            "to": 1.2000000476837158,
+            "wrapMode": 2,
+            "previousId": "083c5"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "023fbb16-f2a0-4308-afa0-75902fa3bc15@0a96a"
+      ],
+      "skeletons": [
+        "023fbb16-f2a0-4308-afa0-75902fa3bc15@438fe"
+      ],
+      "textures": [],
+      "materials": [
+        "023fbb16-f2a0-4308-afa0-75902fa3bc15@0c5df",
+        "023fbb16-f2a0-4308-afa0-75902fa3bc15@ceb1e",
+        "023fbb16-f2a0-4308-afa0-75902fa3bc15@173c6",
+        "023fbb16-f2a0-4308-afa0-75902fa3bc15@a1e6c",
+        "023fbb16-f2a0-4308-afa0-75902fa3bc15@ac837",
+        "023fbb16-f2a0-4308-afa0-75902fa3bc15@24296",
+        "023fbb16-f2a0-4308-afa0-75902fa3bc15@25eef",
+        "023fbb16-f2a0-4308-afa0-75902fa3bc15@4b43a",
+        "023fbb16-f2a0-4308-afa0-75902fa3bc15@85c9e",
+        "023fbb16-f2a0-4308-afa0-75902fa3bc15@6ffb9",
+        "023fbb16-f2a0-4308-afa0-75902fa3bc15@fafd3",
+        "023fbb16-f2a0-4308-afa0-75902fa3bc15@e30f3"
+      ],
+      "scenes": [
+        "023fbb16-f2a0-4308-afa0-75902fa3bc15@2a43e"
+      ]
+    }
+  }
+}

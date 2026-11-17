@@ -1,0 +1,343 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca",
+  "files": [
+    "__original-animation-0.bin"
+  ],
+  "subMetas": {
+    "24296": {
+      "importer": "gltf-material",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@24296",
+      "displayName": "",
+      "id": "24296",
+      "name": "手套鞋1.material",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0a96a": {
+      "importer": "gltf-mesh",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@0a96a",
+      "displayName": "",
+      "id": "0a96a",
+      "name": "高级士兵_skin.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 162650
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "083c5": {
+      "importer": "gltf-animation",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@083c5",
+      "displayName": "",
+      "id": "083c5",
+      "name": "Unreal Take.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.3333333432674408
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 77
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0c5df": {
+      "importer": "gltf-material",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@0c5df",
+      "displayName": "",
+      "id": "0c5df",
+      "name": "内衬1.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ceb1e": {
+      "importer": "gltf-material",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@ceb1e",
+      "displayName": "",
+      "id": "ceb1e",
+      "name": "内衬红.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "173c6": {
+      "importer": "gltf-material",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@173c6",
+      "displayName": "",
+      "id": "173c6",
+      "name": "金.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a1e6c": {
+      "importer": "gltf-material",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@a1e6c",
+      "displayName": "",
+      "id": "a1e6c",
+      "name": "头盔红.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ac837": {
+      "importer": "gltf-material",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@ac837",
+      "displayName": "",
+      "id": "ac837",
+      "name": "身体.material",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "25eef": {
+      "importer": "gltf-material",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@25eef",
+      "displayName": "",
+      "id": "25eef",
+      "name": "M_Hair.material",
+      "userData": {
+        "gltfIndex": 6
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4b43a": {
+      "importer": "gltf-material",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@4b43a",
+      "displayName": "",
+      "id": "4b43a",
+      "name": "枪身1.material",
+      "userData": {
+        "gltfIndex": 7
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "85c9e": {
+      "importer": "gltf-material",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@85c9e",
+      "displayName": "",
+      "id": "85c9e",
+      "name": "枪身1_8.material",
+      "userData": {
+        "gltfIndex": 8
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6ffb9": {
+      "importer": "gltf-material",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@6ffb9",
+      "displayName": "",
+      "id": "6ffb9",
+      "name": "枪管.material",
+      "userData": {
+        "gltfIndex": 9
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fafd3": {
+      "importer": "gltf-material",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@fafd3",
+      "displayName": "",
+      "id": "fafd3",
+      "name": "M_Hair_10.material",
+      "userData": {
+        "gltfIndex": 10
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e30f3": {
+      "importer": "gltf-material",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@e30f3",
+      "displayName": "",
+      "id": "e30f3",
+      "name": "枪身1_11.material",
+      "userData": {
+        "gltfIndex": 11
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d67d0": {
+      "importer": "gltf-scene",
+      "uuid": "fde590d8-98c5-4151-9a49-4c781384d4ca@d67d0",
+      "displayName": "",
+      "id": "d67d0",
+      "name": "中级士兵_原地射击.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "Unreal Take",
+        "duration": 0.3333333432674408,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Unreal Take",
+            "from": 0,
+            "to": 0.3333333432674408,
+            "wrapMode": 2,
+            "previousId": "083c5"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "fde590d8-98c5-4151-9a49-4c781384d4ca@0a96a"
+      ],
+      "skeletons": [
+        "fde590d8-98c5-4151-9a49-4c781384d4ca@438fe"
+      ],
+      "textures": [],
+      "materials": [
+        "fde590d8-98c5-4151-9a49-4c781384d4ca@0c5df",
+        "fde590d8-98c5-4151-9a49-4c781384d4ca@ceb1e",
+        "fde590d8-98c5-4151-9a49-4c781384d4ca@173c6",
+        "fde590d8-98c5-4151-9a49-4c781384d4ca@a1e6c",
+        "fde590d8-98c5-4151-9a49-4c781384d4ca@ac837",
+        "fde590d8-98c5-4151-9a49-4c781384d4ca@24296",
+        "fde590d8-98c5-4151-9a49-4c781384d4ca@25eef",
+        "fde590d8-98c5-4151-9a49-4c781384d4ca@4b43a",
+        "fde590d8-98c5-4151-9a49-4c781384d4ca@85c9e",
+        "fde590d8-98c5-4151-9a49-4c781384d4ca@6ffb9",
+        "fde590d8-98c5-4151-9a49-4c781384d4ca@fafd3",
+        "fde590d8-98c5-4151-9a49-4c781384d4ca@e30f3"
+      ],
+      "scenes": [
+        "fde590d8-98c5-4151-9a49-4c781384d4ca@d67d0"
+      ]
+    }
+  }
+}
