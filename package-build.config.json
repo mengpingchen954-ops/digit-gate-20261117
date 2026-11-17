@@ -1,0 +1,7 @@
+{
+  "name": "测试",
+  "channels": ["google", "applovin"],
+  "output": "试玩成品/Google",
+  "outputs": { "google": "试玩成品/Google", "applovin": "试玩成品/AppLovin" },
+  "enforceSizeLimit": true
+}
